@@ -9,8 +9,10 @@ class Page(TestPage):
         """
         url = "https://www.selenium.dev/selenium/web/web-form.html"
         super().__init__(url)
-        self.text_box = self.driver.find_element(by=By.NAME, value="my-text")
-        self.submit_button = self.driver.find_element(by=By.CSS_SELECTOR, value="button")
+        text_box_locator = (By.NAME, "my-text")
+        self.text_box = self.element_wait(text_box_locator)
+        submit_button_locator = (By.CSS_SELECTOR, "button")
+        self.submit_button = self.element_wait(submit_button_locator)
     
     def text_box_send_keys(self, text):
         self.text_box.send_keys(text)

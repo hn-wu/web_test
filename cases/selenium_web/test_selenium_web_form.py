@@ -12,7 +12,7 @@ class TestSeleniumWebForm(TestCase):
 
     def teardown_class(self):
         logging.info("后置条件")
-        self.selenium_step.selenium_web_form.selenium_web_form.driver_quit()
+        self.selenium_step.selenium_web_form.driver_quit()
 
     def test_login(self):
         self.selenium_step.selenium_web_form.text_box_send_keys({'text':'bgb'})
