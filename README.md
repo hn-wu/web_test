@@ -35,6 +35,18 @@ web页面自动化测试
 1. 默认创建的页面
 2. 上一个业务函数执行后的业务
 
+#### 功能实现
+
+（一）测试报告
+
+执行代码 `pytest -m ./cases/selenium_web/test_selenium_web_form.py -s -q --alluredir=./allure_results/`
+
+生成报告 `allure serve ./allure_results/`
+
+参考链接：
+https://developer.aliyun.com/article/776633
+https://gavin-wang-note.github.io/2024/05/31/pytest_test_guide_part1_chapter1_11_allure/
+
 #### 待实现
 
 （一）Headless Chrome
@@ -61,3 +73,7 @@ https://cloud.tencent.com/developer/article/2358863
 解决方案：去除父类TestCase中的__init__方法
 
 参考链接：https://www.cnblogs.com/renjie1105/p/15476946.html
+
+（三）报错pytest: error: unrecognized arguments: --alluredir
+
+在cmd中而不是conda虚拟环境中执行 `pip install allure-pytest`
